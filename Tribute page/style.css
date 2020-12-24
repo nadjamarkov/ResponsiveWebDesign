@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+h2,
+h3 {
+  text-align: center;
+}
+img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 35%;
+  filter: grayscale(100%);
+}
+#main {
+  font-family: Montserrat;
+  color: white;
+  background-color: black;
+}
+#tribute-info {
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #242222,
+    #423f3e,
+    #615f5c,
+    #81817c
+  );
+}
+#divimg {
+  padding: 200px;
+  background-image: url(https://www.veojam.com/photoart/jaco-pastorius/1.jpg);
+  color: white;
+}
+#divtitle {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -105%);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+#topnav{
+  text-align:center;
+}
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+a{
+  padding-left:20px;
+  color:white;
+}
+.link:hover{
+  color:black;
+}
+a:hover{
+  color:gray;
+}
+hr.hrclass {
+  border-top: 3px double #8c8b8b;
+}
