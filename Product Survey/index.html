@@ -1,0 +1,87 @@
+<body id="body">
+
+  <header id="header">
+    <h1 id="title">Product Survey Form</h1>
+    <p id="description">Thank you for purchasing our product! We would love to get feedback from you.</p>
+  </header>
+  
+  <main id="main">
+  
+    <form id="survey-form">
+    
+      <div id="name-div">
+        <label for="name" id="name-label"> Name </label>
+        <br>
+        <input id="name" name="name" type="text" placeholder="Name" required>
+      </div>
+      <br>
+      
+      <div id="email-div">
+        <label for="email" id="email-label"> Email </label>
+        <br>
+        <input id="email" name="email" type="email" placeholder="Email" required>
+      </div>
+      <br>
+      
+      <div id="age-div">
+        <label for="age" id="number-label"> Age </label>
+        <br>
+        <input id="number" name="age" type="number" placeholder="Age" min="18" max="100" required>
+      </div>
+      <br>
+      
+      <div id="product-div">
+        <label for="product" id="dropdown-label"> Which of our products did you purchase?</label>
+        <br>
+        <select id="dropdown" name="product" required>
+          <option disabled selected value>Product</option>
+          <option value="bracelet">Bracelet</option>
+          <option value="necklace">Necklace</option>
+          <option value="earrings">Earrings</option>
+        </select>
+      </div>
+      <br>
+      
+      <div id="rec-div">
+        <p>Would you recommend our product to a friend?</p>
+        <label name="rec-label"><input name="rec" type="radio" value="definitely">Definitely</label>
+        <br>
+        <label name="rec-label"><input name="rec" type="radio" value="probably">Probably</label>
+        <br>
+        <label name="rec-label"><input name="rec" type="radio" value="no">No</label>
+      </div>
+      <br>
+      
+      <div id="like-div">
+        <p>Which aspects of the product did you like?</p>
+        <label name="like-label"><input name="like" value="design" type="checkbox"> Design </label>
+        <br>
+        <label name="like-label"><input name="like" value="durability" type="checkbox"> Durability </label>
+        <br>
+        <label name="like-label"><input name="like" value="material" type="checkbox"> Material </label>
+        <br>
+        <label name="like-label"><input name="like" value="color" type="checkbox"> Color </label>
+      </div>
+      <br>
+      
+      <div id="comments-div">
+        <p>Do you have any suggestions?</p>
+        <textarea id="comments" name="comments" placeholder="Suggestions"></textarea>
+      </div>
+      <br>
+      
+      <div id="submit-div">
+        <button type="submit" id="submit"> Submit </button>
+      </div>
+      
+    </form>
+    
+  </main>
+  
+  <footer id="footer">
+    <h4>Survey Form</h4>
+    <h5> Created by nadjamarkov for FreeCodeCamp </h5>
+    <h6> 12. January 2021. &#169 nadjamarkov </h6>
+  </footer>
+  
+</body>
