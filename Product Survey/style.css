@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+body {
+  font-family: "Abel", sans-serif;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81d9d52119822.5c4442c0a4b73.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+label[name="rec-label"],
+label[name="like-label"] {
+  display: block;
+  text-align: left;
+  margin-left: 40%;
+}
+
+#submit {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+footer {
+  text-align: right;
+}
