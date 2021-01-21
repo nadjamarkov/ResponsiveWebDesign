@@ -1,0 +1,217 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<body id="body-doc">
+
+  <main id="main-doc">
+  
+    <div id="content">
+    
+      <div id="nav" class="navbar fixed-top">
+      
+        <nav id="navbar">
+          <header id="title"> Swift Documentation</header>
+          <br>
+          <a href="#The_Basics" class="nav-link">The Basics</a>
+          <br>
+          <a href="#Basic_Operators" class="nav-link">Basic Operators</a>
+          <br>
+          <a href="#Strings_and_Characters" class="nav-link">Strings and Characters</a>
+          <br>
+          <a href="#Collection_Types" class="nav-link">Collection Types</a>
+          <br>
+          <a href="#Control_Flow" class="nav-link">Control Flow</a>
+          <br>
+          <a href="#Functions" class="nav-link">Functions</a>
+          <br>
+          <br>
+          <img src="https://developer.apple.com/swift/images/swift-og.png" id="logo-img" alt="swift logo">
+          <br><br>
+        </nav>
+        
+      </div>
+      
+      <div id="text">
+      
+        <section class="main-section" id="The_Basics">
+          <header>The Basics</header>
+          <p>Swift is a new programming language for iOS, macOS, watchOS, and tvOS app development. Nonetheless, many parts of Swift will be familiar from your experience of developing in C and Objective-C.</p>
+          <p><strong>Constants and variables</strong> associate a name (such as <em>maximumNumberOfLoginAttempts</em> or <em>welcomeMessage</em>) with a value of a particular type (such as the number 10 or the string "Hello"). The value of a constant can’t be changed once it’s set, whereas a variable can be set to a different value in the future.</p>
+          <p><strong>Constants and variables must be declared before they’re used.</strong> You declare constants with the <em>let</em> keyword and variables with the <em>var</em> keyword. Here’s an example of how constants and variables can be used to track the number of login attempts a user has made:</p>
+          <code>
+            let maximumNumberOfLoginAttempts = 10
+            var currentLoginAttempt = 0
+          </code>
+          <p>You can <strong>print</strong> the current value of a constant or variable:</p>
+          <code>
+            print(friendlyWelcome)
+            // Prints "Bonjour!"
+          </code>
+        </section>
+        
+        <section class="main-section" id="Basic_Operators">
+          <header>Basic Operators</header>
+          <p>An <strong>operator</strong> is a special symbol or phrase that you use to check, change, or combine values. For example, the <em>addition operator (+)</em> adds two numbers, and the logical <em>AND operator (&&)</em> combines two Boolean values. Operators are <strong>unary, binary, or ternary</strong>:</p>
+          <ul>
+            <li><strong>Unary</strong> operators operate on a single target (such as -a). They can be <em>prefix</em> and <em>postfix</em>.</li>
+            <li><strong>Binary</strong> operators operate on two targets (such as 2 + 3) and are <em>infix</em> because they appear in between their two targets.</li>
+            <li><strong>Ternary</strong> operators operate on three targets. Like C, Swift has only one ternary operator, the ternary conditional operator (a ? b : c).</li>
+          </ul>
+          <p>Swift supports the four standard <strong>arithmetic operators</strong> for all number types:</p>
+          <ul>
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+          </ul>
+          <p>For example:</p>
+          <code>
+            1 + 2 // equals 3
+            5 - 3 // equals 2
+            2 * 3 // equals 6
+            10.0 / 2.5 // equals 4.0
+          </code>
+          <p>The <strong>assignment operator</strong> (a = b) initializes or updates the value of a with the value of b</p>
+          <code>
+            let b = 10
+            var a = 5
+            a = b
+            // a is now equal to 10
+          </code>
+          <p>The <strong>remainder operator</strong> (a % b) works out how many multiples of b will fit inside a and returns the value that is left over (known as the remainder).</p>
+          <code>
+            9 % 4 // equals 1
+          </code>
+          <p>Like C, Swift provides <strong>compound assignment operators</strong> that combine assignment (=) with another operation. One example is the addition assignment operator (+=):</p>
+          <code>
+            var a = 1
+            a += 2
+            // a is now equal to 3
+          </code>
+          <p>Swift supports the following <strong>comparison operators</strong>:</p>
+          <ul>
+            <li>Equal to</li>
+            <li>Not equal to</li>
+            <li>Greater than</li>
+            <li>Less than</li>
+            <li>Greater than or equal to</li>
+            <li>Less than or equal to</li>
+          </ul>
+          <p>The <strong>ternary conditional operator</strong> is a special operator with three parts, which takes the form question ? answer1 : answer2. It’s a shortcut for evaluating one of two expressions based on whether question is true or false. If question is true, it evaluates answer1 and returns its value; otherwise, it evaluates answer2 and returns its value.</p>
+          <p>Here’s an example, which calculates the height for a table row. The row height should be 50 points taller than the content height if the row has a header, and 20 points taller if the row doesn’t have a header:</p>
+          <code>
+            let contentHeight = 40
+            let hasHeader = true
+            let rowHeight = contentHeight + (hasHeader ? 50 : 20)
+            // rowHeight is equal to 90
+          </code>
+        </section>
+        
+        <section id="Strings_and_Characters" class="main-section">
+          <header>Strings and Characters</header>
+          <p>A <strong>string is a series of characters</strong>, such as <em>"hello, world"</em> or <em>"albatross"</em>. Swift strings are represented by the String type.</p>
+          <p>You can include predefined String values within your code as <strong>string literals</strong>. A string literal is a sequence of characters surrounded by double quotation marks ("). Use a string literal as an initial value for a constant or variable:</p>
+          <code>
+            let someString = "Some string literal value"
+          </code>
+          <p>If you need a string that spans several lines, use a <strong>multiline string literal</strong>—a sequence of characters surrounded by three double quotation marks:</p>
+          <code>
+            let quotation = """
+            The White Rabbit put on his spectacles. "Where shall I begin, please your Majesty?" he asked.
+
+            "Begin at the beginning," the King said gravely, "and go on till you come to the end; then stop."
+            """
+          </code>
+          <p>String literals can include the following <strong>special characters</strong>:</p>
+          <ul>
+            <li>The escaped special characters \0 (null character), \\ (backslash), \t (horizontal tab), \n (line feed), \r (carriage return), \" (double quotation mark) and \' (single quotation mark)</li>
+            <li>An arbitrary Unicode scalar value, written as \u{n}, where n is a 1–8 digit hexadecimal number</li>
+          </ul>
+        </section>
+        
+        <section id="Collection_Types" class="main-section">
+          <header>Collection Types</header>
+          <p>Swift provides three primary collection types, known as arrays, sets, and dictionaries, for storing collections of values. <strong>Arrays</strong> are ordered collections of values. <strong>Sets</strong> are unordered collections of unique values. <strong>Dictionaries</strong> are unordered collections of key-value associations.</p>
+          <p>Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store. This means that you cannot insert a value of the wrong type into a collection by mistake. It also means you can be confident about the type of values you will retrieve from a collection.</p>
+          <p>If you create an array, a set, or a dictionary, and assign it to a variable, the collection that is created will be <strong>mutable</strong>. This means that you can change (or mutate) the collection after it’s created by adding, removing, or changing items in the collection. If you assign an array, a set, or a dictionary to a constant, that collection is <strong>immutable</strong>, and its size and contents cannot be changed.</p>
+          <p>Creating an array:</p>
+          <code>
+            var someInts = [Int]()
+          </code>
+          <p>Creating a set:</p>
+          <code>
+            var letters = Set&lt;Character&gt;()
+            print("letters is of type Set&lt;Character&gt; with \(letters.count) items.")
+            // Prints "letters is of type Set&lt;Character&gt; with 0 items."
+          </code>
+          <p>Creating a dictionary:</p>
+          <code>
+            var namesOfIntegers = [Int: String]()
+            // namesOfIntegers is an empty [Int: String] dictionary
+          </code>
+        </section>
+        
+        <section id="Control_Flow" class="main-section">
+          <header>Control Flow</header>
+          <p>Swift provides a variety of <strong>control flow statements</strong>. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code.</p>
+          <p>You use the <strong>for-in loop</strong> to iterate over a sequence, such as items in an array, ranges of numbers, or characters in a string.</p>
+          <code>
+            let names = ["Anna", "Alex", "Brian", "Jack"]
+            for name in names {
+            print("Hello, \(name)!")
+            }
+            // Hello, Anna!
+            // Hello, Alex!
+            // Hello, Brian!
+            // Hello, Jack!
+          </code>
+          <p>A <strong>while loop</strong> performs a set of statements until a condition becomes false. These kinds of loops are best used when the number of iterations is not known before the first iteration begins. Swift provides two kinds of while loops:</p>
+          <ul>
+            <li>while evaluates its condition at the start of each pass through the loop</li>
+            <li>repeat-while evaluates its condition at the end of each pass through the loop</li>
+          </ul>
+          <p>In its simplest form, the <strong>if statement</strong> has a single if condition. It executes a set of statements only if that condition is true.</p>
+          <code>
+            var temperatureInFahrenheit = 30
+            if temperatureInFahrenheit &lt;= 32 {
+            print("It's very cold. Consider wearing a scarf.")
+            }
+
+            // Prints "It's very cold. Consider wearing a scarf."
+          </code>
+          <p>A <strong>switch statement</strong> considers a value and compares it against several possible matching patterns. It then executes an appropriate block of code, based on the first pattern that matches successfully. A switch statement provides an alternative to the if statement for responding to multiple potential states.</p>
+          <p>This example uses a switch statement to consider a single lowercase character called someCharacter:</p>
+          <code>
+            let someCharacter: Character = "z"
+            switch someCharacter {
+            case "a":
+            print("The first letter of the alphabet")
+            case "z":
+            print("The last letter of the alphabet")
+            default:
+            print("Some other character")
+            }
+            // Prints "The last letter of the alphabet"
+          </code>
+          <p>The <strong>continue statement</strong> tells a loop to stop what it is doing and start again at the beginning of the next iteration through the loop. It says “I am done with the current loop iteration” without leaving the loop altogether.</p>
+          <p>The <strong>break statement</strong> ends execution of an entire control flow statement immediately. The break statement can be used inside a switch or loop statement when you want to terminate the execution of the switch or loop statement earlier than would otherwise be the case.</p>
+        </section>
+        
+        <section id="Functions" class="main-section">
+          <header>Functions</header>
+          <p><strong>Functions</strong> are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.</p>
+          <p>When you <strong>define a function</strong>, you can optionally define one or more named, typed values that the function takes as input, known as <strong>parameters</strong>. You can also optionally define a type of value that the function will pass back as output when it is done, known as its return type. Every function has a <strong>function name</strong>, which describes the task that the function performs. To use a function, you “call” that function with its name and pass it input values (known as arguments) that match the types of the function’s parameters. A function’s arguments must always be provided in the same order as the function’s parameter list.</p>
+          <code>
+            func greet(person: String) -&gt; String {
+            let greeting = "Hello, " + person + "!"
+            return greeting
+            }
+          </code>
+        </section>
+        
+      </div>
+      
+    </div>
+    
+  </main>
+  
+</body>
